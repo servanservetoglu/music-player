@@ -1,10 +1,10 @@
 .shadowSlider {
   background: linear-gradient(
     to right,
-    #000 0%,
-    #000 calc(var(--progress, 100%) - 10%),
+    #ffffff 0%,
+    #fff calc(var(--progress, 100%) - 10%),
     rgba(0, 0, 0, 0.9) var(--progress, 100%),
-    rgba(14, 155, 200, 0.8) 100%
+    rgba(0, 0, 0, 0.0) 100%
   );
 }
 

@@ -5,6 +5,8 @@ import {
   faPlay,
   faPause,
   faForward,
+  faRotateBack,
+  faRotateForward,
   faBackward,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -145,10 +147,14 @@ function PodcastNavbar({
             }
           }}
         >
-          <FontAwesomeIcon icon={faForward} size="2x" />
+          <FontAwesomeIcon icon={faRotateBack} size="2x" />
         </button>
         <button onClick={togglePlay}>
-          <FontAwesomeIcon icon={faPlay} size="2x" />
+          {isPlaying ? (
+            <FontAwesomeIcon icon={faPause} size="2x" />
+          ) : (
+            <FontAwesomeIcon icon={faPlay} size="2x" />
+          )}
         </button>
 
         <button
@@ -159,7 +165,7 @@ function PodcastNavbar({
             }
           }}
         >
-          <FontAwesomeIcon icon={faForward} size="2x" />
+          <FontAwesomeIcon icon={faRotateForward} size="2x" />
         </button>
         <button onClick={nextTrack}>
           <FontAwesomeIcon icon={faForward} size="2x" />
