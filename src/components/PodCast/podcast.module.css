@@ -1,0 +1,123 @@
+.shadowSlider {
+  background: linear-gradient(
+    to right,
+    #000 0%,
+    #000 calc(var(--progress, 100%) - 10%),
+    rgba(0, 0, 0, 0.9) var(--progress, 100%),
+    rgba(14, 155, 200, 0.8) 100%
+  );
+}
+
+.bgLayout {
+  background: linear-gradient(
+      0deg,
+      rgba(115, 155, 25, 1) 0%,
+      rgba(100, 55, 255, 1) 100%
+    ),
+    url("/public/bg.png") lightgray 50% / cover no-repeat;
+  filter: blur(250px);
+}
+
+input[type="range"] {
+  appearance: none;
+  border-radius: 360px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  visibility: hidden;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  visibility: visible;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #ffffff, #e5e7eb);
+  border: 2px solid #1f2937;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Focus stilleri */
+input[type="range"]:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  @apply flex flex-col w-full absolute;
+}
+
+.imgContainer {
+  @apply shrink-0 flex flex-col w-full px-[13px];
+}
+
+.imageWrapper {
+  @apply relative w-full overflow-hidden border rounded-lg;
+  padding-top: 100%;
+}
+
+.styledImg {
+  @apply rounded-lg absolute inset-0 w-full h-full;
+}
+/* Ortak flex justify-between sınıfı */
+.flex-between {
+  @apply flex justify-between;
+}
+
+/* Ortak text siyah ve italik olmayan */
+.text-black-normal {
+  @apply text-black not-italic;
+}
+
+.songDetail {
+  @apply text-center py-5 flex flex-col items-start gap-1;
+}
+
+.songWrapper {
+  @apply flex-between w-full;
+}
+
+.songText {
+  @apply text-black-normal font-medium text-base leading-[22px];
+}
+
+.singerText {
+  @apply text-sm font-normal text-gray-500 leading-[20px] not-italic;
+}
+
+.timer {
+  @apply flex-between overflow-hidden text-black text-ellipsis text-[13px] font-medium leading-none not-italic;
+}
+
+.buttonStyle {
+  @apply flex-between mb-4;
+}
+
+.relativeFullySize {
+  @apply w-full h-full relative;
+}
+
+.mainLayout {
+  @apply fixed;
+}
+
+.fullSize {
+  @apply w-full h-full;
+}
+
+.navbarAlign {
+  @apply pt-3;
+}
+
+.timerAlign {
+  @apply mb-[50px];
+}
+
+.shadowSliderSize {
+  @apply w-full h-[6px];
+}
